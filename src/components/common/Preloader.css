@@ -1,0 +1,182 @@
+/* PRELOADER - OPAY STYLE (compact professional) */
+.preloader {
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+/* LOGO CONTAINER - PROFESSIONAL SPACING */
+.logo {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* 5 - professional size */
+.five {
+  font-size: 72px;
+  font-weight: 800;
+  color: #1a2a4f;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+/* SYNC WAVE - PERFECTLY SPACED */
+.sync {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0 12px;
+  padding-top: 8px;
+}
+
+.sync span {
+  width: 4px;
+  background: linear-gradient(180deg, #00b4aa, #1a2a4f);
+  border-radius: 2px;
+  animation: wave 1.2s infinite ease-in-out;
+}
+
+/* Precise waveform heights */
+.sync span:nth-child(1) { height: 14px; animation-delay: 0s; }
+.sync span:nth-child(2) { height: 28px; animation-delay: 0.1s; }
+.sync span:nth-child(3) { height: 42px; animation-delay: 0.2s; }
+.sync span:nth-child(4) { height: 28px; animation-delay: 0.3s; }
+.sync span:nth-child(5) { height: 14px; animation-delay: 0.4s; }
+
+@keyframes wave {
+  0%, 100% { 
+    opacity: 0.35; 
+    transform: scaleY(0.8);
+  }
+  50% { 
+    opacity: 1; 
+    transform: scaleY(1.2);
+    background: #00b4aa;
+  }
+}
+
+/* G - matching 5 */
+.g {
+  font-size: 72px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #1a2a4f 40%, #00b4aa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1;
+}
+
+/* SUBTITLE */
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a2a4f;
+  letter-spacing: 2px;
+  margin-top: 8px;
+  margin-bottom: 28px;
+}
+
+.title span {
+  color: #00b4aa;
+}
+
+/* HEARTBEAT LINE - PROFESSIONAL MEDICAL STYLE */
+.heartbeat {
+  width: 280px;
+  height: 80px;
+  position: relative;
+}
+
+.heartbeat svg {
+  width: 100%;
+  height: 100%;
+}
+
+.heartbeat path {
+  fill: none;
+  stroke: #00b4aa;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: heartbeatDraw 1.8s linear infinite;
+}
+
+@keyframes heartbeatDraw {
+  0% { stroke-dashoffset: 400; }
+  100% { stroke-dashoffset: 0; }
+}
+
+/* FLATLINE TO HEARTBEAT EFFECT */
+.heartbeat::before {
+  content: '';
+  position: absolute;
+  bottom: 28px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #e8ecef;
+  z-index: -1;
+}
+
+/* LOADING INDICATOR */
+.loading-status {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.sync-text {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  color: #00b4aa;
+  text-transform: uppercase;
+}
+
+.progress-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.progress-dots span {
+  width: 6px;
+  height: 6px;
+  background: #00b4aa;
+  border-radius: 50%;
+  animation: progressPulse 1.4s infinite;
+  opacity: 0.4;
+}
+
+.progress-dots span:nth-child(1) { animation-delay: 0s; }
+.progress-dots span:nth-child(2) { animation-delay: 0.2s; }
+.progress-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes progressPulse {
+  0%, 100% { 
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+  50% { 
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* FADE OUT */
+.hide {
+  opacity: 0;
+  pointer-events: none;
+}

@@ -1,0 +1,32 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    
+    // Default deny everything
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+
+    // Helper: Make sure the user is authenticated
+    function isAuth() {
+      return request.auth != null;
+    }
+
+    // Patient Files
+    match /patients/{patientId}/{fileName} {
+      allow read: if isAuth();
+      // Allow writes only if file size is under 15MB, valid type, and authenticated
+      allow write: if isAuth() 
+                   && request.resource.size < 15 * 1024 * 1024 
+                   && request.resource.contentType.matches('application/pdf|image/.*');
+    }
+
+    // Staff Profile Pictures
+    match /profiles/{userId}/{fileName} {
+      allow read: if isAuth();
+      allow write: if isAuth() && request.auth.uid == userId 
+                   && request.resource.size < 5 * 1024 * 1024
+                   && request.resource.contentType.matches('image/.*');
+    }
+  }
+}

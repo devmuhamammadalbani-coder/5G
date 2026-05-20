@@ -1,0 +1,231 @@
+/* CONTINUOUS PROGRESS SHEET - BIG PAPER AESTHETIC */
+.continuous-sheet-container {
+    padding: 2rem;
+    background: #f1f5f9;
+    min-height: 100%;
+}
+
+.sheet-paper {
+    background: #fff;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    min-height: 100vh;
+    padding: 3rem;
+    position: relative;
+    border: 1px solid #e2e8f0;
+}
+
+/* Red margin line effect */
+.sheet-paper::before {
+    content: '';
+    position: absolute;
+    left: 80px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.sheet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 2px solid #1e293b;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hospital-brand h4 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1e293b;
+    margin: 0;
+}
+
+.hospital-brand p {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #00b4aa;
+    margin-top: 4px;
+}
+
+.patient-identifier {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    color: #475569;
+}
+
+.sheet-entry {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.entry-left {
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #64748b;
+}
+
+.entry-duration {
+    margin-top: 4px;
+    background: #f1f5f9;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #0f172a;
+}
+
+.entry-right {
+    flex: 1;
+    padding-bottom: 2rem;
+    border-bottom: 1px dashed #e2e8f0;
+}
+
+.entry-role {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.role-badge {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.role-badge.doctor { background: #dcfce7; color: #166534; }
+.role-badge.nurse { background: #dbeafe; color: #1e40af; }
+.role-badge.laboratory { background: #f3e8ff; color: #6b21a8; }
+.role-badge.radiology { background: #fee2e2; color: #991b1b; }
+
+.entry-type {
+    margin-left: auto;
+    font-size: 0.75rem;
+    color: #94a3b8;
+    font-style: italic;
+}
+
+.entry-vitals-mini {
+    font-family: monospace;
+    background: #f8fafc;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    font-size: 0.85rem;
+    color: #334155;
+    border-left: 3px solid #00b4aa;
+}
+
+.entry-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #1e293b;
+}
+
+.entry-footer {
+    margin-top: 1rem;
+}
+
+.entry-sig {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 1.2rem;
+    color: #1e40af;
+}
+
+.sheet-empty {
+    text-align: center;
+    padding: 5rem 2rem;
+    color: #94a3b8;
+    font-style: italic;
+}
+
+.sheet-scan-preview {
+    margin-top: 1rem;
+    cursor: pointer;
+    position: relative;
+    max-width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #e2e8f0;
+}
+
+.sheet-scan-preview img {
+    width: 100%;
+    display: block;
+}
+
+.scan-label {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.65rem;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.quick-write-section {
+    margin-bottom: 2rem;
+    background: #fffbeb;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px dashed #f59e0b;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quick-write-section textarea {
+    width: 100%;
+    min-height: 80px;
+    border: 1px solid #fed7aa;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 0.9rem;
+    resize: vertical;
+    background: white;
+}
+
+.pin-note-btn {
+    align-self: flex-end;
+    background: #f59e0b;
+    color: white;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.2s;
+}
+
+.pin-note-btn:hover:not(:disabled) {
+    background: #d97706;
+}
+
+.pin-note-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+

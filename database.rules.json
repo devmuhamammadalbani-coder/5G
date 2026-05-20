@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "notifications": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    }
+  }
+}

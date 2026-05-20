@@ -1,0 +1,113 @@
+.booking-v2 {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid #e2e8f0;
+}
+
+.booking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.booking-header h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #1e293b;
+    font-size: 1.1rem;
+}
+
+.patient-summary {
+    background: #eff6ff;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: #2563eb;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.booking-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.booking-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.booking-field.full {
+    grid-column: span 2;
+}
+
+.booking-field label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.booking-field select,
+.booking-field input,
+.booking-field textarea {
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+.booking-field textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.booking-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.confirm-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.confirm-btn:hover {
+    background: #1d4ed8;
+}
+
+.confirm-btn:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+}
+
+.cancel-btn {
+    background: white;
+    border: 1px solid #cbd5e1;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    color: #64748b;
+    font-weight: 600;
+    cursor: pointer;
+}

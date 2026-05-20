@@ -1,0 +1,29 @@
+# Query: SAHARA EHR
+# ContextLines: 1
+
+5 results - 5 files
+
+umman ahmad.zip\src\components\Sidebar.jsx:
+  40                      <img src="/logo.png" alt="Sahara Logo" style={{ width: '32px', height: '32px' }} />
+  41:                     <h2 style={{ margin: 0 }}>5G E GURU CLINIC</h2>
+  42                  </div>
+
+umman ahmad.zip\src\context\AuthContext.jsx:
+  328    if (authLoading) {
+  329:     return <Preloader fullPage message="Connecting to Sahara EHR System..." />;
+  330    }
+
+umman ahmad.zip\src\pages\Admin.jsx:
+  105          const specialtyLine = u.specialty ? `\nAssigned Ward: ${specialtyLabel}` : '';
+  106:         const text = `5G E GUR CLINIC LOGIN CREDENTIALS\n--------------------\nName: ${u.name}\nRole: ${u.role}${specialtyLine}\nEmail: ${u.email}\nSystem Username: ${u.username || u.email.split('@')[0]}\nPassword: ${u.password}\n--------------------\n`;
+  107          navigator.clipboard.writeText(text);
+
+umman ahmad.zip\src\pages\Dashboard.jsx:
+  145                          <Activity size={18} />
+  146:                         <h3>5G E GURU CLINIC System Status</h3>
+  147                      </div>
+
+umman ahmad.zip\src\pages\Login.jsx:
+  160                  </div>
+  161:                 <h1>5G E GURU CLINIC Portal Login</h1>
+  162                  <p className="login-subtitle">Secured Medical Information System · Sahara Unified</p>
